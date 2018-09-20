@@ -1,0 +1,38 @@
+1. git init : To initialize your local repository as a git repository
+
+2. git add --all / git add . : To add all your local changes and make them ready for commit
+
+3. git commit -m "Message" : To add changes into a queue. You can remove the commit if it is unpushed. 
+
+4. git push origin [branch_name] : To actually push the data to the remote repository.
+
+5. git pull origin [branch_name] : To pull the data from a particular branch.
+
+6. git remote add remotename(origin) [Remote_Repository_URL] : To add an origin to your remote repository
+
+7. git remote set-url remotename(origin) [Remote_Repository_URL] : To update origin name of your remote repository
+
+8. git config  --global user.name "Your_Git_User_Name" 
+
+9. git config  --global user.email "Your_Git_Email"  : To connect to your github/bitbucket account - One time setup. You can remove global 							       option if the project is committed from multiple accounts.
+
+10. git remote rename [origin] [destination] : To Change remote name from 'origin' to 'destination'
+
+11. git reset --hard HEAD : To revert to most recent commit and ignoring all local changes. We need to checkout to master to get rid of that.
+
+12. git clone [Remote_Repository_URL] : Clones a git repository to your computer.
+
+13. git checkout -b newBranchNameThatDoesNotExistsInRemoteRepository  : To create a new branch and check it out at the same time.
+
+14. git status : To check status of branch and modified files.
+
+15. git log : To view all your commits, their details with a commit ID. It shows a history of all your commits for the branch you're on.
+
+16. git stash : To revert your local working directory to its previous state, but make a record of that state. The modifications stashed away by 			this command can be listed with git stash list. To check the record of this state git stash show is used. It is used before 			taking a pull.
+
+17. git reflog : To view all your commits, which were pushed or unpushed, due to switching branches.
+		 It is a record of all commits that are or were referenced in your repo at any time.
+
+18 git rebase : To merge your local branch work with your master branch. It is different from git merge as using git merge will add your 			feature branch work as a single commit, while git rebase will add the entire commit history on the tip of master branch.
+		Combining tasks from public branch into local branch -- use git rebase
+		Combining tasks from local branch to public branch -- use git merge

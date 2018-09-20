@@ -1,0 +1,49 @@
+Angular CLI commands
+
+1. ng generate : To generate a new element in an Angular 6 application. We can generate a class, component, directive, interface or module etc. using it.
+ Syntax: ng generate component name
+
+2. ng new [name] : Creates a new angular application.
+
+3. ng serve : Builds the application and starts a web server. Run it from root folder of your project. --aot flag can be used for AOT compilation of app.
+
+4. ng lint : To test your application on server and fix bugs.
+
+5. ng test : Compiles the application into an output directory. Execute unit test. Tests will execute after a build is executed via Karma, and it will automatically watch your files for changes. Karma : A simple tool that allows you to execute JavaScript code in multiple real browsers.
+
+6. ng e2e : Serves the application and runs end-to-end tests. The test would act as a user would interact with the app, via Protractor, a framework of Angular application used for end to end testing.
+
+7. ng build : Compiles the application into an output directory.
+Syntax : ng build --base-href /myUrl/ (ng build --dev :For development build, ng build --prod : For production build, ng build --aot : For AOT compilation)
+
+8. ng config [key] [value] Get/set configuration values. [key] should be in JSON path format. Example: a[3].foo.bar[2].
+
+9. ng doc [search term] Opens the official Angular API documentation for a given keyword on angular.io.
+
+10. ng eject : Ejects your app and output the proper webpack configuration and scripts. It just de-initializes the app.
+
+11. ng update : Updates the current application to latest versions.
+Syntax : ng update [package]
+
+12. ng xi18n : Extracts i18n messages from the templates. i18n is an angular internationalization tool, which can help you make your app available in multiple languages.
+
+Angular 6 Notes
+
+1. Inside @NgModule(app.module.ts file)
+
+		    -->  declarations : We will add all the components,  directives, and pipes which we want to use into our application.
+		    -->  imports : Other modules which are used.
+		    -->  providers : All Services which are created.
+		    -->  bootstrap : The main application view, called the root component, which hosts all other app views. Only the root 					     NgModule should set this property. Name would be same as name of class of app.component.ts file.
+
+		    -->	 exports : The subset of declarations that should be visible and usable in the component templates of other NgModules.
+
+2. RxJS (Reactive Extensions for JavaScript) is a library for reactive programming using observables that makes it easier to compose asynchronous or callback-based code.
+
+3. A component and its template together define a view.
+
+4. Property binding ( [property] ) : Write a template property binding to set a property of a view element. The binding sets the property to the value of a template expression.
+Eg :  [hero]="selectedHero"
+
+5. Event binding ( (event) ) : Event binding syntax consists of a target event name within parentheses on the left of an equal sign, and a quoted template statement on the right.
+Eg : <button (click)="onSave()">Save</button>

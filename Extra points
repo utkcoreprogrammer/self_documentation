@@ -1,0 +1,38 @@
+* AOT : In angular 6 application, Ahead Of Time compilation takes place. It compiles the application a during the build, ahead of the runtime whereas JIT compilation compiles the application during in the browser at runtime. This produces faster/better UX.
+
+JIT generates JavaScript however, AoT usually generates TypeScript.
+
+* Source maps : Source maps helps us debug our applications, even if the files are compressed & combined. It is generated behind the scenes, by default, on development build, but not on production build.
+
+* Snake Case : Words are written in either uppercase or lowercase but are seperated with an underscore.
+Eg : foo_bar, Hello_World, Hello_india etc.
+
+* Kebab Case : Words are seperated with a dash rest similar to snake case. Eg : foo-Bar, Hello-World, Hello-india etc.
+
+* Train case : If every word is capitalized, rest same as kebab case. Eg : FOO-BAR
+
+* Pascal Case : Pascal case is a subset of Camel Case where the first letter is capitalized. Eg : HelloWorld
+
+* Gulp : A task runner to automate few processes like - Converting TS to JS, manage components that contain HTML, CSS, JavaScript, fonts or even image files, minifying uglyfying etc. These are basically build tasks!
+
+* Lazy loading : It is done to load few expensive resources on-demand. When we hit an angular application, it loads all its resources which results in reduced startup time of an application. Lazy loading is applied on few angular modules seperately.  
+
+* Inside Lib folder in backend : We define and put third party API's which we need to use at many places in our application.
+
+* Inside config : We set environment variables (URL which will hit when the application will run such as localhost etc.) for different modes of our project. For development mode, production mode etc. 
+
+* SCSS  : Sashy CSS. In this we declare certain certain css properties using $ symbol . Eg : $width , $color and can use it again and again by changing its value. 
+
+* SASS : Syntactically Awesome style sheets : an older approach of writing css, where there is no semicolon and curly braces between the css properties. It works on indentation, line breaks and white spaces!
+
+* Angular Live Reload not working  : Run these two commands back 2 back
+				     sudo sysctl fs.inotify.max_user_watches=524288
+				     sudo sysctl -p --system
+
+* Using Array Map Function : $scope.item = $scope.groupMembers.map(({fname}) => fname)
+
+
+
+
+
+

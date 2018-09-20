@@ -1,0 +1,43 @@
+Mongoose is an Object Document Mapper (ODM). This means that Mongoose allows you to define objects with a strongly-typed schema that is mapped to a MongoDB document.
+
+Mongoose provides an incredible amount of functionality around creating and working with schemas. Mongoose currently contains eight SchemaTypes that a property is saved as when it is persisted to MongoDB. They are:
+
+    String
+    Number
+    Date
+    Buffer
+    Boolean
+    Mixed
+    ObjectId
+    Array
+
+Each data type allows you to specify:
+
+    a default value
+    a custom validation function
+    indicate a field is required
+    a get function that allows you to manipulate the data before it is returned as an object
+    a set function that allows you to manipulate the data before it is saved to the database
+    create indexes to allow data to be fetched faster
+
+Further to these common options, certain data types allow you to further customize how the data is stored and retrieved from the database. For example, a String data type also allows you to specify the following additional options:
+
+    convert it to lowercase
+    convert it to uppercase
+    trim data prior to saving
+    a regular expression that can limit data allowed to be saved during the validation process
+    an enum that can define a list of strings that are valid
+
+The Number and Date properties both support specifying a minimum and maximum value that is allowed for that field.
+
+
+Imp Links : MongoDB shell_______  https://docs.mongodb.com/manual/reference/method/db.collection.findOneAndUpdate/
+
+	    Mongoose__________    http://mongoosejs.com/docs/api.html#query_Query 	findOneAndUpdate
+
+	    Node.js MongoDB Driver API______  http://mongodb.github.io/node-mongodb-native/3.0/api/Collection.html#findOneAndUpdate
+
+To get inserted object in Node.js MongoDB driver on using insertOne function, use ops[0] with response.
+
+
+
