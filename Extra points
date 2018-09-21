@@ -29,7 +29,19 @@ Eg : foo_bar, Hello_World, Hello_india etc.
 				     sudo sysctl fs.inotify.max_user_watches=524288
 				     sudo sysctl -p --system
 
-* Using Array Map Function : $scope.item = $scope.groupMembers.map(({fname}) => fname)
+* Using Array Map Function : $scope.item = $scope.groupMembers.map(({fname}) => fname), where $scope.groupMembers must be an array
+
+* A blank array returns true when passed in a conditional statement like if,else.
+
+* A number variable equal to zero always returns false when passed in a conditional statement, so avoid using that in if.. kind of statements.
+ Either convert it to string or put condtion as :  if(x == 0) as not as if(x), as the later would always return false, as it will treat zero as a boolean (false) as not as a value.
+
+* To access the properties of an object we use syntax objectName['propertyName'] or objectName.propertyName. As array is accessed with indexes, object is accessed with its properties. 
+
+* Javascript Hoisting : Hoisting is JavaScript's default behavior of moving declarations to the top.
+Means you can use a variable before declaring it into a program. 
+ 
+ 
 
 
 

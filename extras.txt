@@ -8,3 +8,29 @@
 //     this.rows = temp;
 
 // }
+
+
+{"statusAsNumber":true,"keywords":[],"status" : 0, "0":true}}
+
+
+
+            // const searchBySupplier = value.supplierName.toLowerCase(); 
+            // this._suppService.getAllSupplier().subscribe(res =>{
+            //     let index= res.suppliers.findIndex(x=>
+            //     {
+            //         return x.company.toLowerCase() == searchBySupplier
+            //     }); 
+
+            //     if(!(index ==-1)){
+            //         let searchId = res.suppliers[index].id
+            //         this._suppService.getSupplier(searchId).subscribe(res =>{
+            //             this.rows = [res.supplier]
+            //         });
+            //     }
+            //     else{
+            //         return this._toastr.error(CodeConstants.SEARCH_FAILURE, CodeConstants.FAILURE);
+            //     }
+            // })
+
+To be changed in backend : 1. changeStatus API -> Active, Inactive to 0,1 
+2. Company to Supplier name in DB

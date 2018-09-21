@@ -1,6 +1,6 @@
-Mongoose is an Object Document Mapper (ODM). This means that Mongoose allows you to define objects with a strongly-typed schema that is mapped to a MongoDB document.
+* Mongoose is an Object Document Mapper (ODM). This means that Mongoose allows you to define objects with a strongly-typed schema that is mapped to a MongoDB document.
 
-Mongoose provides an incredible amount of functionality around creating and working with schemas. Mongoose currently contains eight SchemaTypes that a property is saved as when it is persisted to MongoDB. They are:
+* Mongoose provides an incredible amount of functionality around creating and working with schemas. Mongoose currently contains eight SchemaTypes that a property is saved as when it is persisted to MongoDB. They are:
 
     String
     Number
@@ -11,7 +11,7 @@ Mongoose provides an incredible amount of functionality around creating and work
     ObjectId
     Array
 
-Each data type allows you to specify:
+* Each data type allows you to specify:
 
     a default value
     a custom validation function
@@ -20,7 +20,7 @@ Each data type allows you to specify:
     a set function that allows you to manipulate the data before it is saved to the database
     create indexes to allow data to be fetched faster
 
-Further to these common options, certain data types allow you to further customize how the data is stored and retrieved from the database. For example, a String data type also allows you to specify the following additional options:
+* Further to these common options, certain data types allow you to further customize how the data is stored and retrieved from the database. For example, a String data type also allows you to specify the following additional options:
 
     convert it to lowercase
     convert it to uppercase
@@ -37,7 +37,7 @@ Imp Links : MongoDB shell_______  https://docs.mongodb.com/manual/reference/meth
 
 	    Node.js MongoDB Driver API______  http://mongodb.github.io/node-mongodb-native/3.0/api/Collection.html#findOneAndUpdate
 
-To get inserted object in Node.js MongoDB driver on using insertOne function, use ops[0] with response.
+* To get inserted document in Node.js MongoDB driver while using insertOne function, use ops[0] with response. Syntax : res.ops[0] - will return inserted object.
 
 
 

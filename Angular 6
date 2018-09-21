@@ -47,3 +47,7 @@ Eg :  [hero]="selectedHero"
 
 5. Event binding ( (event) ) : Event binding syntax consists of a target event name within parentheses on the left of an equal sign, and a quoted template statement on the right.
 Eg : <button (click)="onSave()">Save</button>
+
+6. In Angular material if we use ngx-datatable then we do not need to give table headers a name from client side, it will automatically take the name from response payload, if passed in name like this  : name="First Name". In our response array firstName should be in camel case!
+Here name works both as our column name and also to take column data which we want to show in our table.
+
