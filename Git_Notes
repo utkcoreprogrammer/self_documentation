@@ -36,3 +36,5 @@
 18 git rebase : To merge your local branch work with your master branch. It is different from git merge as using git merge will add your 			feature branch work as a single commit, while git rebase will add the entire commit history on the tip of master branch.
 		Combining tasks from public branch into local branch -- use git rebase
 		Combining tasks from local branch to public branch -- use git merge
+
+19. git reset --soft HEAD~1 : To undo the last commit or the most recent one. All the added files will be unstaged again to be committed. 
