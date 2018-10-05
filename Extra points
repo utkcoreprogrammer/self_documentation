@@ -1,5 +1,4 @@
 * AOT : In angular 6 application, Ahead Of Time compilation takes place. It compiles the application a during the build, ahead of the runtime whereas JIT compilation compiles the application during in the browser at runtime. This produces faster/better UX.
-
 JIT generates JavaScript however, AoT usually generates TypeScript.
 
 * Source maps : Source maps helps us debug our applications, even if the files are compressed & combined. It is generated behind the scenes, by default, on development build, but not on production build.
@@ -34,7 +33,7 @@ Eg : foo_bar, Hello_World, Hello_india etc.
 * A blank array returns true when passed in a conditional statement like if,else.
 
 * A number variable equal to zero always returns false when passed in a conditional statement, so avoid using that in if.. kind of statements.
- Either convert it to string or put condtion as :  if(x == 0) as not as if(x), as the later would always return false, as it will treat zero as a boolean (false) as not as a value.
+ Either convert it to string or put condition as :  if(x == 0) as not as if(x), as the later would always return false, as it will treat zero as a boolean (false) as not as a value.
 
 * To access the properties of an object we use syntax objectName['propertyName'] or objectName.propertyName. As array is accessed with indexes, object is accessed with its properties. 
 

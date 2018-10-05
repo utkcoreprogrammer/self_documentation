@@ -38,3 +38,8 @@
 		Combining tasks from local branch to public branch -- use git merge
 
 19. git reset --soft HEAD~1 : To undo the last commit or the most recent one. All the added files will be unstaged again to be committed. 
+
+20. Difference between git reset hard,soft,mixed : 
+--soft: uncommit changes, changes is left staged (index), does not delete from local repository.
+--mixed (default): uncommit + unstage changes, changes is left in working tree.
+--hard: uncommit + unstage + delete changes, nothing left.
