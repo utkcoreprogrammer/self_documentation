@@ -2,11 +2,11 @@
 
 1. db.getCollection('quotations').update({id:149},{$pull : {q_options : {opt_id : 2}}}) 
 
-To delete a value from a nested document (A document within a document). $pull applies only on an array field. (q_options is an array, under which we have to delete the data of opt_id ==2)
+To delete a value from a nested document (A document within a document). $pull applies only on an array field. (q_options is an array, under which we have to delete the data of opt_id ==2). $pull operator removes from an existing array all instances of a value or values that match a specified condition.
 
 2. db.getCollection('quotations').update({id:145},{$pull : {q_options : {opt_id : {$in : [1,2]}}}})
 
-Same as above, we could pass an array of values as well. (Here we are deleting data of opt_id 2 and 1 as well). Note : Both query deletes data from only 1 document(where id == 145).
+Same as above, we could pass an array of values as well. (Here we are deleting data of opt_id 2 and 1 as well). Note : Both query deletes data from only 1 document(where id == 145). The $pullAll operator removes all instances of the specified values from an existing array. Unlike the $pull operator that removes elements by specifying a query, $pullAll removes elements that match the listed values.
 
 3. db.getCollection('quotations').updateMany({},{$pull : {q_options :{opt_id:{$in : [1,2]}}}})
 
