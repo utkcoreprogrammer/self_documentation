@@ -1,0 +1,42 @@
+
+
+1. db.getCollection('quotations').update({id:149},{$pull : {q_options : {opt_id : 2}}}) 
+
+To delete a value from a nested document (A document within a document). $pull applies only on an array field. (q_options is an array, under which we have to delete the data of opt_id ==2)
+
+2. db.getCollection('quotations').update({id:145},{$pull : {q_options : {opt_id : {$in : [1,2]}}}})
+
+Same as above, we could pass an array of values as well. (Here we are deleting data of opt_id 2 and 1 as well). Note : Both query deletes data from only 1 document(where id == 145).
+
+3. db.getCollection('quotations').updateMany({},{$pull : {q_options :{opt_id:{$in : [1,2]}}}})
+
+This would delete q_options of opt_id 1 & 2 from all documents within the collection. (Since 1st parameter is blank).
+
+4. db.getCollection('quotations').update({},{$pull : {q_options :{opt_id:{$in : [1,2]}}}}, {multi : true})
+
+Alternate way of above query no. 3.
+
+5. db.getCollection('quotations').find({$where : function() {return (this.id ==125)}})
+
+$where is used to find anything from a given document based on a certain condition. We could pass a string or a full JS function within it. Documents are referenced using this or obj. (With this query we can find document where id field value is 125). We could use it for more complex conditions).
+
+6. db.getCollection('quotations').find({$where : function() {return (this.bs_unt =='CA')}})
+
+Same as above field and condition is changes.
+
+7. db.getCollection('quotations').find({$expr : {$gt : ["$q_vl", "$id"]}}).count()
+
+$expr is used to build query expressions that compare fields from the same document. Here q_vl and id field is compared for greater value. This query will return the no. of documents where q_vl values are greater than id values. ($gt is used for checking is greater than >, $lt is for less than <).
+
+
+
+
+
+ 
+
+
+
+
+
+
+
