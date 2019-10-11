@@ -42,6 +42,16 @@ Imp Links : MongoDB shell_______  https://docs.mongodb.com/manual/reference/meth
 * To import a particular collection in existing db use :
 	mongoimport --db dbName --collection collectionName fileName.json. Here collection name should be that name which we want our collection to be named in the db. We will run this by going to the directory in which the downloaded JSON file exists. 
 
+* Find a field in all collections of a db : 
+
+db.getCollectionNames().forEach(function(collname) {
+    var count = db[collname].find({"account": {$exists: true}}).count();
+    if (count > 0) {
+      print(collname);
+    }
+})
+Here "account" is the key name or field name. This returns all collections having account as the field in that particular db.
+
 
 
 
